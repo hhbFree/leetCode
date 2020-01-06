@@ -6,14 +6,36 @@ public class Employee {
 
     private String name;
 
-    private int age;
+    private Integer age;
 
-    private double salary;
+    private Double salary;
 
-    public Employee(String name, int age, double salary) {
+    private State state;
+
+    public Employee() {
+
+    }
+
+    public Employee(String name, Integer age, Double salary, State state) {
+
         this.name = name;
         this.age = age;
         this.salary = salary;
+        this.state = state;
+    }
+
+    public Employee(String name, Integer age, Double salary) {
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+    }
+
+    public State getState() {
+        return state;
+    }
+
+    public void setState(State state) {
+        this.state = state;
     }
 
     @Override
@@ -23,6 +45,7 @@ public class Employee {
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 ", salary=" + salary +
+                ", state=" + state +
                 '}';
     }
 
@@ -42,19 +65,27 @@ public class Employee {
         this.name = name;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
-    public double getSalary() {
+    public Double getSalary() {
         return salary;
     }
 
-    public void setSalary(double salary) {
+    public void setSalary(Double salary) {
         this.salary = salary;
     }
+
+    public enum State {
+        a,
+        b,
+        c,
+        d
+    }
+
 }
