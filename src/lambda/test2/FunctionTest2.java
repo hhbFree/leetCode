@@ -1,7 +1,8 @@
 package lambda.test2;
 
 import lambda.test1.Employee;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+
 
 import java.util.Arrays;
 import java.util.Collections;

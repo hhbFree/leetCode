@@ -8,7 +8,7 @@ public class ObserverTest {
         StatisticsDisplay statisticsDisplay=new StatisticsDisplay(weatherData);//注册
 
         weatherData.setMeasurements(1,2,3);
-        weatherData.setMeasurements(1,2,3);
+        weatherData.setMeasurements(1,3,3);
         weatherData.setMeasurements(1,2,3);
     }
 }

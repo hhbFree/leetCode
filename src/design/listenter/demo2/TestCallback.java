@@ -11,10 +11,7 @@ class TestCallback {
 			@Override
 			public void run(Object a) {
 				System.out.println(a+"");
-
 			}
-
-
 		});
 	}
 }
