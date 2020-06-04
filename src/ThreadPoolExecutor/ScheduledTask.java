@@ -22,6 +22,7 @@ public class ScheduledTask {
 		fixedPeriodSchedule();
 	}
 	class FixedSchedule implements Runnable {
+		@Override
 		public void run() {
 			System.out.println("当前线程："+Thread.currentThread().getName()+"  当前时间："+new Date(System.currentTimeMillis()));
 		}
