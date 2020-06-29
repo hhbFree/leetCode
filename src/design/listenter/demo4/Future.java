@@ -359,6 +359,8 @@ public class Future<V> {
 	 *
 	 * @author Lv.Mingwei
 	 */
+
+
 	private final class Sync extends AbstractQueuedSynchronizer {
 		private static final long serialVersionUID = -990419035911612884L;
 
