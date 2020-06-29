@@ -353,16 +353,20 @@ public class Future<V> {
 	/**
 	 * 同步控制器，目的为实现阻塞，继承自AQS
 	 *
+	 * ReentrantLock内部存在3个实现类，分别是Sync、NonfairSync、FairSync，其中Sync继承自AQS实现了解锁tryRelease()方法，
+	 * 而NonfairSync(非公平锁)、 FairSync(公平锁)则继承自Sync，实现了获取锁的tryAcquire()方法，
+	 * ReentrantLock的所有方法调用都通过间接调用AQS和Sync类及其子类来完成的
+	 *
 	 * @author Lv.Mingwei
 	 */
 	private final class Sync extends AbstractQueuedSynchronizer {
 		private static final long serialVersionUID = -990419035911612884L;
 
 		/** 停止状态 */
-		private static final int STOP = 0;
+		private static final int STOP = 0;//没有任何线程占有共享资源的锁
 
 		/** 正在运行中 */
-		private static final int RUNNING = 1;
+		private static final int RUNNING = 1;//有线程目前正在使用共享变量，其他线程必须加入同步队列进行等待
 
 		/**
 		 * 初始化为未运行状态
