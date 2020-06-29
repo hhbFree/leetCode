@@ -363,6 +363,7 @@ public class Future<V> {
 
 	private final class Sync extends AbstractQueuedSynchronizer {
 		//主分支
+		//分支
 		private static final long serialVersionUID = -990419035911612884L;
 
 		/** 停止状态 */
