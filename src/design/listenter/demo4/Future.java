@@ -380,7 +380,7 @@ public class Future<V> {
 		}
 
 		/**
-		 * AQS的惯用法，此处标识当AQS尝试获取共享锁时，是否获取成功，如果当前不处于运行状态，则可以获取
+		 * 共享模式下获取锁的方法
 		 */
 		@Override
 		public int tryAcquireShared(int acquires) {
@@ -388,7 +388,7 @@ public class Future<V> {
 		}
 
 		/**
-		 * AQS的惯用方法，此处标识为释放
+		 * 共享模式下解锁的方法
 		 */
 		@Override
 		public boolean tryReleaseShared(int releases) {
