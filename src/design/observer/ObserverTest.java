@@ -10,5 +10,6 @@ public class ObserverTest {
         weatherData.setMeasurements(1,2,3);
         weatherData.setMeasurements(1,3,3);
         weatherData.setMeasurements(1,2,3);
+
     }
 }

@@ -38,7 +38,7 @@ public final class Event<E>
 	 */
 	public void addListener(EventHandler<E> eventHandler)
 	{
-		if (listener0.compareAndSet(null, eventHandler) == false) {
+		if (listener0.compareAndSet(null, eventHandler) == false) {//监听类赋值失败
 			synchronized (this) {
 				if (listeners == null) {
 					listeners = new LinkedList<EventHandler<E>>();
