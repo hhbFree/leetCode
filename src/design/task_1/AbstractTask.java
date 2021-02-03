@@ -1,4 +1,4 @@
-package nio.demo.task_1;
+package design.task_1;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -12,7 +12,7 @@ import java.util.concurrent.Executors;
  */
 public abstract class AbstractTask {
 
-    protected Map<String,TaskQueue> con;
+    protected Map<String, TaskQueue> con;
 
     private Map<String,Thread> map;
 
@@ -28,7 +28,7 @@ public abstract class AbstractTask {
     }
 
 
-    public synchronized void put(String taskName,TaskQueue taskQueue){
+    public synchronized void put(String taskName, TaskQueue taskQueue){
 
         Thread thread=new Thread(()->{
             while (true){
@@ -56,5 +56,5 @@ public abstract class AbstractTask {
     }
 
 
-     public abstract boolean runTest(String taskName,TaskQueue taskQueue);
+     public abstract boolean runTest(String taskName, TaskQueue taskQueue);
 }

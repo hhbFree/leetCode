@@ -1,4 +1,4 @@
-package nio.demo.task_1;
+package design.task_1;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
@@ -9,7 +9,7 @@ import java.util.concurrent.PriorityBlockingQueue;
  * @Author: hbHao
  * @Date: 2020/11/12 19:53
  */
-public class TaskQueueMemory implements TaskQueue{
+public class TaskQueueMemory implements TaskQueue {
 
     Map<Integer, Queue> map=new ConcurrentHashMap<>();
 

@@ -1,4 +1,4 @@
-package nio.demo.task_1;
+package design.task_1;
 
 import java.util.Random;
 

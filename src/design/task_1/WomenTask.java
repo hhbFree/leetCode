@@ -1,4 +1,4 @@
-package nio.demo.task_1;
+package design.task_1;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import java.util.List;
  * @Author: hbHao
  * @Date: 2020/11/12 20:10
  */
-public class WomenTask extends AbstractTask{
+public class WomenTask extends AbstractTask {
 
     public WomenTask(TaskQueue taskQueueMemory) {
         put("women",taskQueueMemory);

@@ -1,6 +1,9 @@
-package nio.demo.task_1;
+package design.task_1;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -8,7 +11,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * @Author: hbHao
  * @Date: 2020/11/12 20:56
  */
-public class TaskListMemory implements TaskQueue{
+public class TaskListMemory implements TaskQueue {
 
     Map<Integer, List> map=new ConcurrentHashMap<>();
 
